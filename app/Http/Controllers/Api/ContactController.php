@@ -32,7 +32,7 @@ class ContactController extends Controller
             $new_lead->fill($data);
             $new_lead->save();
 
-            Mail::to('info@me.com')->send(new SendNewMail($new_lead));
+            Mail::to('admin@me.com')->send(new SendNewMail($new_lead));
 
 
             return response()->json([
